@@ -67,47 +67,34 @@ ul.categoria{
 
 
 
-.categoria a{
-  color: #daaaff;;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 20px;
-  font-family: "Poppins", sans-serif;
-  font-size:16px;
-  padding: 6px;
-  text-decoration: none;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.subtitulo{
-    margin-left: 150px;
-    padding: 20px;
-    font-size: 20px;
-}
-
-
-
-
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background: #f8f9fa;
 }
-
-
 .container {
-  max-width: 1200px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(101, 97, 97, 0.1);
-  
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(101, 97, 97, 0.1);
+    
 
 }
+.manutencoes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.manutencoes .item {
+    font-size: 18px;
+    font-weight: bold;
+}
+.total { color: blue; }
+.andamento { color: orange; }
+.finalizadas { color: purple; }
 
 .tabs {
     display: flex;
@@ -129,23 +116,72 @@ body {
     justify-content: space-between;
     margin-bottom: 20px;
 }
+.add-os {
+    background: #563d7c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filter {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-
-
-
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 th, td {
-    padding: 20px;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
     text-align: left;
     color: rgb(109, 109, 109);
 }
+.atrasado { color: orange; }
+.entregue { color: blue; }
+.garantia { color: purple; }
+.andamento { color: green; }
 
 
 
 
 
+footer {
+background-color: #CEF5A4;
+color: #000000;
+padding: 20px 0;
+margin-top: 30px;    
+}
 
-/*filtro*/
+.footer-container {
+display: flex;
+justify-content: space-between;
+max-width: 1200px;
+margin: auto;
+font-family: "Montserrat", sans-serif;
+}
+
+
+.footer-container .logo img {
+width: 250px;
+display: inline; 
+}
+
+
+
+h3 {
+margin-left: 400px;
+margin: 00px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
 .filter {
 width: 50px;
 height: 50px;
@@ -175,7 +211,7 @@ fill: white;
 
 
 
-/* botao add envio */ 
+/* From Uiverse.io by andrew-demchenk0 */ 
 .button {
 position: relative;
 width: 160px;
@@ -239,7 +275,7 @@ border: 1px solid #2e8644;
 
 
 
-/*pedidos botão */
+
 .card {
 border: 1px solid #ddd;
 border-radius: 8px;
@@ -319,52 +355,18 @@ font-weight: bold;
 
 
 
-
-
-
-
-
-
-
-
-
-nav ul {
-  list-style: none;
-  display: flex;
-  padding: 15px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.aceitas {
+font-family: Arial, sans-serif;
+background-color:#f8f9fa;
+margin: 20px;
+max-width: 1200px;
+margin-left: 150px; 
+margin-right: 150px;
 }
-nav ul li {
-  margin-right: 20px;
-  cursor: pointer;
-}
-.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-.container {
-  max-width: 1200px;
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
 h2 {
-  margin-bottom: 15px;
-}
-.filters button {
-  background: #ddd;
-  border: none;
-  padding: 8px 15px;
-  margin-right: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.selected {
-  background: #3c3c88;
-  color: white;
+  color: black;
+  margin-left: 40px;
 }
 table {
   width: 100%;
@@ -372,89 +374,121 @@ table {
   margin-top: 20px;
 }
 th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
+  padding: 12px;
   text-align: left;
 }
 th {
-  background: #f4f4f4;
-}
-.nota {
-  background: #ddd;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-.status {
-  padding: 5px 10px;
-  border-radius: 5px;
   font-weight: bold;
+  color: black;
 }
-.enviado {
-  background: #28a745;
-  color: white;
+td {
+  color: #333;
 }
-.pendente {
-  background: #ffc107;
-  color: white;
+.highlight {
+  background-color: #eef3ff;
+  border-radius: 10px;
 }
-.search-filters {
-  margin-top: 20px;
+.green-text {
+  color: green;
 }
-.search-filters input {
-  padding: 8px;
-  margin-right: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.buscar {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-
-
-/* botao dias */ 
-.radio-inputs {
-  position: relative;
+.pagination {
   display: flex;
-  flex-wrap: wrap;
-  border-radius: 0.5rem;
-  background-color: #EEE;
-  box-sizing: border-box;
-  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
-  padding: 0.25rem;
-  width: 300px;
-  font-size: 14px;
-}
-
-.radio-inputs .radio {
-  flex: 1 1 auto;
-  text-align: center;
-}
-
-.radio-inputs .radio input {
-  display: none;
-}
-
-.radio-inputs .radio .name {
-  display: flex;
-  cursor: pointer;
   align-items: center;
   justify-content: center;
-  border-radius: 0.5rem;
+  margin-top: 20px;
+}
+.pagination button {
   border: none;
-  padding: .5rem 0;
-  color: rgba(51, 65, 85, 1);
-  transition: all .15s ease-in-out;
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.activee {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+.dropdown {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #eef3ff;
+  padding: 10px;
+  border-radius: 50%;
 }
 
-.radio-inputs .radio input:checked + .name {
-  background-color: #fff;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+.botaofim {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: flex;
+  margin-left: 1300px;
+  padding: 10px;;
+}
+
+.svggIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svggIcon path {
+  fill: white;
+}
+
+.botaofim:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(181, 160, 255);
+  align-items: center;
+}
+
+.botaofim:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.botaofim::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.botaofim:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
 }
